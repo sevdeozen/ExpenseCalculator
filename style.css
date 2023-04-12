@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fef2f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-family: "Poppins";
+}
+.heading {
+  text-shadow: 2px 2px 20px rgb(183, 50, 70);
+  letter-spacing: 2px;
+}
+.container {
+  min-width: 60vw;
+  max-width: 80vw;
+  height: 70vh;
+  background-color: #d14d72;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.greet {
+  font-size: 28px;
+  align-self: flex-start;
+  font-family: "Inconsolata", monospace;
+}
+
+.greet input {
+  border: none;
+  outline: none;
+  font-size: 22px;
+  font-weight: 300;
+  width: 240px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.double {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-expense,
+.form-price {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid rgb(174, 174, 174);
+  outline: none;
+}
+
+.add-btn {
+  background-color: #f7ff93;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid #f7ff93;
+  outline: none;
+  font-weight: 600;
+}
+
+.total {
+  background-color: #ecf2ff;
+  padding: 10px 40px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.total span {
+  color: #1f8a70;
+  font-size: 21px;
+  font-weight: 600;
+  padding: 40px;
+}
+
+#list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+}
+.expense {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ecf2ff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.exp-price {
+  color: #1f8a70;
+}
+
+.expense img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
