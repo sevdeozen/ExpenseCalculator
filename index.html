@@ -1,58 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1 class="heading">💰 Expense Calculator  💰</h1>
-    
-   <div class="container">
-    <h3 class="greet">Welcome, <input type="text" placeholder="enter your name.."> </h3>
-    <form >
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="heading">💰 Expense Calculator 💰</h1>
+
+    <div class="container">
+      <h3 class="greet">
+        Welcome,
+        <input id="name-input" type="text" placeholder="enter your name.." />
+      </h3>
+      <form>
         <div class="double">
-            <div class="form-expense">
-                <label >Expense:</label>
-                <input type="text">
-            </div>
-            <div class="form-price">
-                <label >Price:</label>
-                <input type="number">
-            </div>
+          <div class="form-expense">
+            <label>Expense:</label>
+            <input id="form-exp" type="text" />
+          </div>
+          <div class="form-price">
+            <label>Price:</label>
+            <input id="form-price" type="number" />
+          </div>
         </div>
         <div class="double">
-            <div class="form-status">
-                <input id="status" type="checkbox">
-                <label for="status">Paid</label>
-            </div>
-            <button class="add-btn">ADD</button>
+          <div class="form-status">
+            <input id="status" type="checkbox" />
+            <label for="status">Paid</label>
+          </div>
+          <button class="add-btn">ADD</button>
         </div>
-    </form>
-    <div class="total">
-        Total Expense: <span>5000 </span> &#36;
+      </form>
+      <div class="total">
+        Total Expense: <span id="total-info">0 </span> &#36;
+      </div>
+      <div class="select">
+        <select>
+          <option value="All">All</option>
+          <option value="Paid">Paid</option>
+          <option value="Not-paid">Not-paid</option>
+        </select>
+      </div>
+
+      <div id="list"></div>
     </div>
-    <div id="list">
-        <div class="expense">
-            <h2 class="exp-title">Deneeme</h2>
-            <h2 class="exp-price">5000</h2>
-            <div class="buttons">
-                <img src="/img/card.png" >
-                <img src="/img/delete.png" >
-            </div>
-        </div>
-        <div class="expense">
-            <h2 class="exp-title">Deneeme</h2>
-            <h2 class="exp-price">5000</h2>
-            <div class="buttons">
-                <img src="/img/card.png" >
-                <img src="/img/delete.png" >
-            </div>
-        </div>
-    </div>
-   </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

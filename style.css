@@ -23,7 +23,7 @@ body {
 .container {
   min-width: 60vw;
   max-width: 80vw;
-  height: 70vh;
+  height: 75vh;
   background-color: #d14d72;
   padding: 30px;
   display: flex;
@@ -79,9 +79,10 @@ input {
   background-color: #f7ff93;
   padding: 10px 30px;
   border-radius: 10px;
-  border: 1px solid #f7ff93;
+  border: 2px solid #e8f173;
   outline: none;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .total {
@@ -101,9 +102,10 @@ input {
 #list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   width: 100%;
   padding: 10px;
+  overflow: auto;
 }
 .expense {
   display: flex;
@@ -111,16 +113,82 @@ input {
   justify-content: space-between;
   align-items: center;
   background-color: #ecf2ff;
-  padding: 20px;
+  padding: 12px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: all 0.5s ease;
+}
+
+.fall {
+  transform: translateX(-400px);
+  opacity: 0;
 }
 .exp-price {
-  color: #1f8a70;
+  color: #e42b0a;
 }
 
 .expense img {
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+
+.paid {
+  opacity: 0.7;
+}
+
+.paid .exp-title {
+  text-decoration: line-through;
+  color: #1f8a70;
+}
+
+.paid .exp-price {
+  color: #1f8a70;
+}
+
+/*select */
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  background-color: #ecf2ff;
+  background-image: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: 0.25em;
+  overflow: hidden;
+  background-color: #88aaf5;
+}
+
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #88aaf5;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #304e91;
 }
